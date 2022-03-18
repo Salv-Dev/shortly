@@ -1,4 +1,5 @@
 import Helmet from 'react-helmet';
+import Header from '../components/organisms/Header';
 import GlobalStyles from './../config/GlobalStyles';
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
       </Helmet>
       <GlobalStyles />
       <div className="App">
-        <h1>Url Shortening Interface</h1>
+        <Header />
       </div>
     </>
   );
