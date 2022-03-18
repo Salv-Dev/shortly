@@ -1,8 +1,10 @@
-import { Container } from './styles';
+import { Container, Image } from './styles';
 
 const Logo: React.FC = () => {
   return (
-      <Container></Container>
+      <Container>
+          <Image src="/images/logo.svg" alt="Logo da Shortly na cor azul escuro" />
+      </Container>
   );
 }
 
