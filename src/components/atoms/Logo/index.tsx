@@ -1,9 +1,14 @@
 import { Container, Image } from './styles';
 
-const Logo: React.FC = () => {
+interface LogoProps {
+  src: string,
+  alt: string
+}
+
+const Logo = ({ src, alt }:LogoProps) => {
   return (
       <Container>
-          <Image src="/images/logo.svg" alt="Logo da Shortly na cor azul escuro" />
+          <Image src={src} alt={alt} />
       </Container>
   );
 }

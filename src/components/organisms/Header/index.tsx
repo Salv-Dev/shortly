@@ -6,7 +6,7 @@ import { Container } from './styles';
 const Header: React.FC = () => {
   return (
       <Container>
-          <Logo />
+          <Logo src="/images/logo.svg" alt="Logo da Shortly na cor azul escuro" />
       </Container>
   );
 }
