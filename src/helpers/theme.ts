@@ -10,7 +10,7 @@ export const defaultTheme:DefaultTheme = {
         },
         primary: {
             light: {
-                main: '#3b3054',
+                main: '#b30543',
                 text: '#9e9aa7',
                 accent: '#2acfcf',
                 background: '#bfbfbf'
@@ -19,7 +19,7 @@ export const defaultTheme:DefaultTheme = {
                 main: '#ffffff',
                 text: '#bfbfbf',
                 accent: '#2acfcf',
-                background: '#3b3054'
+                background: '#b30543'
             }
         }
     }
