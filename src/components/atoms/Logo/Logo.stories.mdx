@@ -1,0 +1,16 @@
+import { Canvas, Meta, Story, ArgsTable, Props } from '@storybook/addon-docs';
+import Logo from './index';
+
+<Meta title="components/atoms" component={Logo} />
+
+# Logo
+
+<ArgsTable of={Logo} />
+
+<Canvas>
+    <Story
+        name="Logo"
+    >
+        <Logo src="/images/logo.svg" alt="Logo da Shortly na cor azul escuro" href="/" />
+    </Story>
+</Canvas>
