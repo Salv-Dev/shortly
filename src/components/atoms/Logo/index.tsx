@@ -2,12 +2,13 @@ import { Container, Image } from './styles';
 
 interface LogoProps {
   src: string,
-  alt: string
+  alt?: string,
+  href: string
 }
 
-const Logo = ({ src, alt }:LogoProps) => {
+const Logo = ({ src, alt, href }:LogoProps) => {
   return (
-      <Container>
+      <Container href={href}>
           <Image src={src} alt={alt} />
       </Container>
   );
