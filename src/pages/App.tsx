@@ -1,5 +1,6 @@
 import Helmet from 'react-helmet';
 import Header from '../components/organisms/Header';
+import Main from '../components/organisms/Main';
 import GlobalStyles from './../config/GlobalStyles';
 import { ThemeProvider } from 'styled-components';
 import { defaultTheme as theme } from './../helpers/theme';
@@ -17,6 +18,7 @@ function App() {
       <div className="App">
         <ThemeProvider theme={theme}>
           <Header />
+          <Main />
         </ThemeProvider>
       </div>
     </>
