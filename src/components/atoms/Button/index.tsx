@@ -1,8 +1,10 @@
 import { Container } from './styles';
 
-const Button: React.FC = () => {
+const Button: React.FC = ({ children }) => {
   return (
-    <Container></Container>
+    <Container>
+        { children }
+    </Container>
   );
 }
 
