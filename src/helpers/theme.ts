@@ -6,11 +6,12 @@ export const defaultTheme:DefaultTheme = {
         common: {
             black: '#1f1f1f',
             white: '#ffffff',
-            red: '#d93f3f'
+            red: '#d93f3f',
+            violet: '#3b3054'
         },
         primary: {
             light: {
-                main: '#b30543',
+                main: '#232127',
                 text: '#9e9aa7',
                 accent: '#2acfcf',
                 background: '#bfbfbf'
@@ -19,7 +20,7 @@ export const defaultTheme:DefaultTheme = {
                 main: '#ffffff',
                 text: '#bfbfbf',
                 accent: '#2acfcf',
-                background: '#b30543'
+                background: '#232127'
             }
         }
     }
