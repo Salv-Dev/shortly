@@ -3,8 +3,8 @@ import styled from 'styled-components';
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
-    height: 100px;
-    padding: 20px;
+    gap: 20px;
+    padding: 25px;
     margin: 20px;
     background: url('/images/bg-shorten-mobile.svg') no-repeat;
     background-position: right top;

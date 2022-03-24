@@ -1,8 +1,14 @@
+import React from 'react';
 import { Container } from './styles';
 
-const Button: React.FC = ({ children }) => {
+interface Props {
+  variant?: string
+  children: React.ReactNode
+}
+
+const Button = ({ children, variant } : Props) => {
   return (
-    <Container>
+    <Container variant={variant}>
         { children }
     </Container>
   );
