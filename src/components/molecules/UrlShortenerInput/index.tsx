@@ -1,10 +1,12 @@
-import React from 'react';
+import Input from '../../atoms/Input';
 
 import { Container } from './styles';
 
 const UrlShortenerInput: React.FC = () => {
   return (
-      <Container></Container>
+      <Container>
+        <Input />
+      </Container>
   );
 }
 
