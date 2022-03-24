@@ -5,7 +5,7 @@ import { Container } from './styles';
 const UrlShortenerInput: React.FC = () => {
   return (
       <Container>
-        <Input />
+        <Input placeholder="Encurtar um link aqui..." />
       </Container>
   );
 }

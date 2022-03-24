@@ -1,8 +1,16 @@
-import { Ipt } from './styles';
+import { Container, Ipt, ErrorMessage } from './styles';
 
-const Input: React.FC = () => {
+interface Props {
+    placeholder?: string,
+    error?: boolean
+}
+
+const Input = ({ placeholder, error = false }: Props) => {
   return (
-      <Ipt></Ipt>
+      <Container>
+          <Ipt placeholder={placeholder} error={error}/>
+          { error && <ErrorMessage>Por favor, adicione uma url.</ErrorMessage>}
+      </Container>
   );
 }
 
