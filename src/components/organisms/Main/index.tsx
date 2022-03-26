@@ -1,5 +1,5 @@
 import Banner from '../../molecules/Banner';
-import UrlShortenerInput from '../../molecules/UrlShortenerInput';
+import AdvancedStatistics from '../../molecules/AdvancedStatistics';
 
 import { Container } from './styles';
 
@@ -7,7 +7,7 @@ const Main: React.FC = () => {
   return (
       <Container>
         <Banner />
-        <UrlShortenerInput />
+        <AdvancedStatistics />
       </Container>
   );
 }

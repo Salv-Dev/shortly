@@ -14,7 +14,7 @@ export const defaultTheme:DefaultTheme = {
                 main: '#232127',
                 text: '#9e9aa7',
                 accent: '#2acfcf',
-                background: '#bfbfbf'
+                background: '#f0f1f6'
             },
             dark: {
                 main: '#ffffff',
