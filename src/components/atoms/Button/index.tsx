@@ -2,7 +2,7 @@ import React from 'react';
 import { Container } from './styles';
 
 interface Props {
-  variant?: string
+  variant?: 'rounded' | 'squared',
   children: React.ReactNode
 }
 

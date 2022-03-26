@@ -11,7 +11,16 @@ export const Container = styled.button<Props>`
     padding: 15px 40px;
     font-size: 1rem;
     font-weight: bold;
-    border-radius: ${props => props.variant == 'rounded' ? '30px' : props.theme.borderRadius};
+    border-radius: ${props => {
+                        switch(props.variant) {
+                            case 'rounded' :
+                                return '30px';
+                            case 'squared' : 
+                                return '0px';
+                            default : 
+                                return props.theme.borderRadius;
+                        }
+                    }};
     cursor: pointer;
     transition: opacity .2s ease-in-out;
 
