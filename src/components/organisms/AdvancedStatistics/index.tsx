@@ -1,4 +1,4 @@
-import UrlShortenerInput from '../UrlShortenerInput';
+import UrlShortenerInput from '../../molecules/UrlShortenerInput';
 
 import { Container, WrapperTitle, Title, Desc } from './styles';
 

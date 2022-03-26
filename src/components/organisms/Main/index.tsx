@@ -1,5 +1,5 @@
 import Banner from '../../molecules/Banner';
-import AdvancedStatistics from '../../molecules/AdvancedStatistics';
+import AdvancedStatistics from '../AdvancedStatistics';
 
 import { Container } from './styles';
 

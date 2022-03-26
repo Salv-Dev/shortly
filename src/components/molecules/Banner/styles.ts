@@ -15,6 +15,7 @@ export const TextWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 15px;
     margin-top: 30px;
     padding: 0 20px;
 `;
@@ -26,7 +27,6 @@ export const Title = styled.h1`
     letter-spacing: -2px;
     line-height: 2.2rem;
     color: ${props => props.theme.palette.primary.light.main};
-    margin-bottom: 10px;
 `;
 
 export const Desc = styled.p`
