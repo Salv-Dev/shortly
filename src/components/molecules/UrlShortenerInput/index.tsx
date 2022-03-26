@@ -2,10 +2,15 @@ import Input from '../../atoms/Input';
 import Button from '../../atoms/Button';
 
 import { Container } from './styles';
+import React from 'react';
 
-const UrlShortenerInput: React.FC = () => {
+interface Props {
+  style?: React.CSSProperties
+}
+
+const UrlShortenerInput = ({ style }: Props) => {
   return (
-      <Container>
+      <Container style={style}>
         <Input placeholder="Encurtar um link aqui..." />
         <Button>Encurte!</Button>
       </Container>
