@@ -1,10 +1,21 @@
+import React from 'react';
+import { Container, WrapperTitle, Title, Desc } from './styles';
 
+interface Props {
+    title?: string,
+    desc?: string,
+    children?: React.ReactNode
+}
 
-import { Container } from './styles';
-
-const Card: React.FC = () => {
+const Card = ({ children, title, desc }: Props) => {
   return (
-      <Container></Container>
+      <Container>
+          {children}
+          <WrapperTitle>
+            <Title>{title}</Title>
+            <Desc>{desc}</Desc>
+          </WrapperTitle>
+      </Container>
   );
 }
 

@@ -1,3 +1,4 @@
+import Card from '../../atoms/Card';
 import UrlShortenerInput from '../../molecules/UrlShortenerInput';
 
 import { Container, WrapperTitle, Title, Desc } from './styles';
@@ -10,6 +11,7 @@ const AdvancedStatistics: React.FC = () => {
             <Title>Estatísticas avançadas</Title>
             <Desc>Acompanhe o desempenho de seus links na web com nosso painel de estatísticas avançadas.</Desc>
           </WrapperTitle>
+          <Card />
       </Container>
   );
 }

@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
-    height: 500px;
     background-color: ${props => props.theme.palette.primary.light.background};
     margin-top: 170px;
+    padding: 0 20px 20px 20px;
 `;
 
 export const WrapperTitle = styled.div`
