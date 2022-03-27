@@ -1,4 +1,5 @@
 import Card from '../../atoms/Card';
+import Icon from '../../atoms/Icon';
 import UrlShortenerInput from '../../molecules/UrlShortenerInput';
 
 import { Container, WrapperTitle, Title, Desc } from './styles';
@@ -18,7 +19,12 @@ const AdvancedStatistics: React.FC = () => {
           <Card 
             title="Reconhecimento de Marca"
             desc="Aumente o reconhecimento da sua marca a cada clique. Links genéricos não significam nada. Links de marca ajudam a incutir confiança em seu conteúdo."
-          />
+          >
+            <Icon 
+              src="images/icon-brand-recognition.svg"
+              variant="rounded"
+              style={{ position: 'relative', top: 'calc(-75px / 2)', left: '50%', transform: 'translate(-50%, 0)'}} />
+          </Card>
           
       </Container>
   );

@@ -4,12 +4,13 @@ import { Container } from './styles';
 
 interface Props {
     src: string,
-    variant?: 'rounded' | 'square'
+    variant?: 'rounded' | 'square',
+    style?: React.CSSProperties
 }
 
-const Icon = ({ src, variant }: Props) => {
+const Icon = ({ src, variant, style }: Props) => {
   return (
-      <Container src={src} variant={variant} ></Container>
+      <Container src={src} variant={variant} style={style}></Container>
   );
 }
 
