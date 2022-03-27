@@ -15,6 +15,11 @@ const AdvancedStatistics: React.FC = () => {
             title="Reconhecimento de Marca"
             desc="Aumente o reconhecimento da sua marca a cada clique. Links genéricos não significam nada. Links de marca ajudam a incutir confiança em seu conteúdo."
           />
+          <Card 
+            title="Reconhecimento de Marca"
+            desc="Aumente o reconhecimento da sua marca a cada clique. Links genéricos não significam nada. Links de marca ajudam a incutir confiança em seu conteúdo."
+          />
+          
       </Container>
   );
 }

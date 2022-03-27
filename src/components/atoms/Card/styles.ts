@@ -1,12 +1,28 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 250px;
     background-color: ${props => props.theme.palette.common.white};
     border-radius: ${props => props.theme.borderRadius};
+
+    &:not(:last-child) {
+        margin-bottom: 80px;
+    }
+
+    &:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        bottom: -80px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 8px;
+        height: 80px;
+        background-color: ${props => props.theme.palette.primary.light.accent};
+    }
 `;
 
 export const WrapperTitle = styled.div`
