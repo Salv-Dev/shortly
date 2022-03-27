@@ -11,7 +11,10 @@ const AdvancedStatistics: React.FC = () => {
             <Title>Estatísticas avançadas</Title>
             <Desc>Acompanhe o desempenho de seus links na web com nosso painel de estatísticas avançadas.</Desc>
           </WrapperTitle>
-          <Card />
+          <Card 
+            title="Reconhecimento de Marca"
+            desc="Aumente o reconhecimento da sua marca a cada clique. Links genéricos não significam nada. Links de marca ajudam a incutir confiança em seu conteúdo."
+          />
       </Container>
   );
 }
