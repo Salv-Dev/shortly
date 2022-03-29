@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.section`
     background-color: ${props => props.theme.palette.primary.light.background};
     margin-top: 170px;
-    padding: 0 20px 20px 20px;
+    padding: 0 20px 80px 20px;
 `;
 
 export const WrapperTitle = styled.div`
@@ -11,7 +11,7 @@ export const WrapperTitle = styled.div`
     flex-direction: column;
     gap: 20px;
     margin: -20px 0 20px 0;
-    padding: 0 20px;
+    padding: 0 20px 60px 20px;
 `;
 
 export const Title = styled.h2`
