@@ -1,15 +1,21 @@
+import React from 'react';
 import { Container, Image } from './styles';
 
 interface LogoProps {
-  src: string,
+  src?: string,
   alt?: string,
-  href: string
+  href: string,
+  children?: React.ReactNode
 }
 
-const Logo = ({ src, alt, href }:LogoProps) => {
+const Logo = ({ src, alt, href, children }:LogoProps) => {
   return (
       <Container href={href}>
-          <Image src={src} alt={alt} />
+          {children ?
+            children
+            :
+            <Image src={src} alt={alt} />
+          }
       </Container>
   );
 }
