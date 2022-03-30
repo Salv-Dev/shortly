@@ -6,9 +6,7 @@ import { Container } from './styles';
 const Footer: React.FC = () => {
   return (
       <Container>
-          <Logo href="/">
-            <LogoSVG />
-          </Logo>
+          <Logo href="/" svg={<LogoSVG />} fill="white" />
       </Container>
   );
 }

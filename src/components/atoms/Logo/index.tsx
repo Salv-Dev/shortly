@@ -5,14 +5,15 @@ interface LogoProps {
   src?: string,
   alt?: string,
   href: string,
-  children?: React.ReactNode
+  fill?: string,
+  svg?: React.SVGProps<SVGSVGElement>,
 }
 
-const Logo = ({ src, alt, href, children }:LogoProps) => {
+const Logo = ({ src, alt, href, svg, fill }:LogoProps) => {
   return (
-      <Container href={href}>
-          {children ?
-            children
+      <Container href={href} fill={fill} >
+          {svg ?
+            svg
             :
             <Image src={src} alt={alt} />
           }
