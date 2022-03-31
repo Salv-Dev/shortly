@@ -1,10 +1,25 @@
 import React from 'react';
 
-import { Container } from './styles';
+import { Container, Title } from './styles';
 
-const List: React.FC = () => {
+interface Props {
+    title?: string,
+    style?: React.CSSProperties,
+    children?: React.ReactNode
+}
+
+const List = ({ title, children, style }:Props ) => {
   return (
-      <Container></Container>
+      <Container style={style}>
+          { title ?
+           <>
+            <Title>{title}</Title>
+            {children}
+           </>
+            :
+            children
+          }
+      </Container>
   );
 }
 
