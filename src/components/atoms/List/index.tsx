@@ -5,12 +5,13 @@ import { Container, Title } from './styles';
 interface Props {
     title?: string,
     style?: React.CSSProperties,
+    align?: "left" | "center" | "right",
     children?: React.ReactNode
 }
 
-const List = ({ title, children, style }:Props ) => {
+const List = ({ title, children, style, align }:Props ) => {
   return (
-      <Container style={style}>
+      <Container style={style} align={align || "left"}>
           { title ?
            <>
             <Title className="title">{title}</Title>
