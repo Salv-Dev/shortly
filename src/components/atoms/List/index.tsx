@@ -13,7 +13,7 @@ const List = ({ title, children, style }:Props ) => {
       <Container style={style}>
           { title ?
            <>
-            <Title>{title}</Title>
+            <Title className="title">{title}</Title>
             {children}
            </>
             :

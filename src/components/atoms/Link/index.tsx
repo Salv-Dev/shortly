@@ -1,8 +1,18 @@
+import React from 'react';
 import { Container } from './styles';
 
-const Link: React.FC = () => {
+interface Props extends React.AnchorHTMLAttributes<HTMLAnchorElement>{
+    style?: React.CSSProperties,
+    hoverColor?: string,
+    activeColor?: string,
+    children: React.ReactNode
+}
+
+const Link = ({children, hoverColor, activeColor, target, ...props}:Props) => {
   return (
-      <Container></Container>
+      <Container {...props} hoverColor={hoverColor} activeColor={activeColor} target={target || '_blank'}>
+        {children}
+      </Container>
   );
 }
 
