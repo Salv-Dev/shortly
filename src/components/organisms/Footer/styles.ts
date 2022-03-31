@@ -7,5 +7,12 @@ export const Container = styled.footer`
     gap: 20px;
     height: 800px;
     background-color: ${props => props.theme.palette.primary.light.main};
-    padding: 40px 20px;
+    padding: 60px 20px;
+`;
+
+export const WrapperList = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 20px;
 `;

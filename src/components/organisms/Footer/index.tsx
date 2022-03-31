@@ -3,7 +3,7 @@ import {ReactComponent as LogoSVG} from './../../../assets/images/logo.svg';
 import List from '../../atoms/List';
 import Link from '../../atoms/Link';
 
-import { Container } from './styles';
+import { Container, WrapperList } from './styles';
 
 
 
@@ -11,11 +11,24 @@ const Footer: React.FC = () => {
   return (
       <Container>
           <Logo href="/" svg={<LogoSVG />} fill="white" />
-          <List title="Recursos" style={{ color: 'white' }} align="center">
-            <Link href="/" hoverColor="#2acfcf" ><li>Encurtador de links</li></Link>
-            <Link href="/" hoverColor="#2acfcf" ><li>Links de marca</li></Link>
-            <Link href="/" hoverColor="#2acfcf" ><li>Análise</li></Link>
-          </List>
+          <WrapperList>
+            <List title="Funcionalidades" style={{ color: 'white' }} align="center">
+              <Link href="/" hoverColor="#2acfcf" ><li>Encurtador de Links</li></Link>
+              <Link href="/" hoverColor="#2acfcf" ><li>Links de Marca</li></Link>
+              <Link href="/" hoverColor="#2acfcf" ><li>Análise</li></Link>
+            </List>
+            <List title="Recursos" style={{ color: 'white' }} align="center">
+              <Link href="/" hoverColor="#2acfcf" ><li>Blog</li></Link>
+              <Link href="/" hoverColor="#2acfcf" ><li>Desenvolvedores</li></Link>
+              <Link href="/" hoverColor="#2acfcf" ><li>Suporte</li></Link>
+            </List>
+            <List title="Companhia" style={{ color: 'white' }} align="center">
+              <Link href="/" hoverColor="#2acfcf" ><li>Sobre</li></Link>
+              <Link href="/" hoverColor="#2acfcf" ><li>Nosso Time</li></Link>
+              <Link href="/" hoverColor="#2acfcf" ><li>Carreira</li></Link>
+              <Link href="/" hoverColor="#2acfcf" ><li>Contato</li></Link>
+            </List>
+          </WrapperList>
       </Container>
   );
 }
