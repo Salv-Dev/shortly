@@ -29,6 +29,7 @@ export const WrapperTitle = styled.div`
     display: flex;
     flex-direction: column;
     gap: 20px;
+    margin-top: -10px;
 `;
 
 export const Title = styled.h3`

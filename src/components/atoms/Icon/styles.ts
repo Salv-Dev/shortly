@@ -1,25 +1,25 @@
 import styled from 'styled-components';
 
 interface Props {
-    src: string,
-    variant?: string
+    size?: number,
+    color?: string
 }
 
 export const Container = styled.div<Props>`
-    width: 75px;
-    height: 75px;
-    border-radius: ${props => {
-                        switch(props.variant) {
-                            case 'rounded':
-                                return '50%';
-                            case 'square':
-                                return '0px';
-                            default:
-                                return props.theme.borderRadius;
-                        }
-                    }};
-    background: ${props => `url(${props.src})`} no-repeat;
-    background-position: center;
-    background-size: 35px;
-    background-color: ${props => props.theme.palette.common.violet};
+    display: inline-block;
+    position: relative;
+    width: ${props => props.size + 'px'};
+    height: ${props => props.size + 'px'};
+    vertical-align: middle;
+
+    & svg {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    & svg path {
+        fill: ${props => props.color};
+    }
 `;

@@ -29,3 +29,17 @@ export const Desc = styled.p`
     text-align: center;
     line-height: 1.4rem;
 `;
+
+export const BackgroundIcon = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: calc(-75px / 2);
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: ${props => props.theme.palette.common.violet};
+`;

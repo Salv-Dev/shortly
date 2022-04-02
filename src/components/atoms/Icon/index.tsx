@@ -1,16 +1,20 @@
 import React from 'react';
+import Icons from '../../../helpers/iconsSwitcher';
 
 import { Container } from './styles';
 
 interface Props {
-    src: string,
-    variant?: 'rounded' | 'square',
+    name: string,
+    size?: number,
+    color?: string,
     style?: React.CSSProperties
 }
 
-const Icon = ({ src, variant, style }: Props) => {
+const Icon = ({ name, style, size, color }: Props) => {
   return (
-      <Container src={src} variant={variant} style={style}></Container>
+      <Container size={size || 40} color={color} style={style}>
+        {Icons(name)}
+      </Container>
   );
 }
 

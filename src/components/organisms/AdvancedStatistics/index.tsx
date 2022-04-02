@@ -3,7 +3,7 @@ import Icon from '../../atoms/Icon';
 import UrlShortenerInput from '../../molecules/UrlShortenerInput';
 import DataCards from '../../../helpers/cardInfos';
 
-import { Container, WrapperTitle, Title, Desc } from './styles';
+import { Container, WrapperTitle, Title, Desc, BackgroundIcon } from './styles';
 
 const AdvancedStatistics: React.FC = () => {
   return (
@@ -19,10 +19,11 @@ const AdvancedStatistics: React.FC = () => {
               title={data.title}
               desc={data.desc}
             >
-              <Icon 
-                src={data.iconSrc}
-                variant="rounded"
-                style={{ position: 'relative', top: 'calc(-75px / 2)', left: '50%', transform: 'translate(-50%, 0)'}} />
+              <BackgroundIcon>
+                <Icon 
+                  name={data.iconName}
+                 />
+              </BackgroundIcon>
             </Card>
           ))}
           
