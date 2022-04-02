@@ -4,7 +4,7 @@ import Icons from '../../../helpers/iconsSwitcher';
 import { Container } from './styles';
 
 interface Props {
-    name: string,
+    name:  string,
     size?: number,
     color?: string,
     style?: React.CSSProperties

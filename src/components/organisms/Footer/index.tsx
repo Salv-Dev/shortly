@@ -2,8 +2,9 @@ import Logo from '../../atoms/Logo';
 import {ReactComponent as LogoSVG} from './../../../assets/images/logo.svg';
 import List from '../../atoms/List';
 import Link from '../../atoms/Link';
+import Icon from '../../atoms/Icon';
 
-import { Container, WrapperList } from './styles';
+import { Container, WrapperList, SocialMedia } from './styles';
 
 
 
@@ -29,6 +30,20 @@ const Footer: React.FC = () => {
               <Link href="/" hoverColor="#2acfcf" ><li>Contato</li></Link>
             </List>
           </WrapperList>
+          <SocialMedia>
+            <Link  hoverColor="#2acfcf">
+              <Icon name="facebook" size={24}/>
+            </Link>
+            <Link  hoverColor="#2acfcf">
+              <Icon name="twitter" size={24}/>
+            </Link>
+            <Link  hoverColor="#2acfcf">
+              <Icon name="pinterest" size={24}/>
+            </Link>
+            <Link  hoverColor="#2acfcf">
+              <Icon name="instagram" size={24}/>
+            </Link>
+          </SocialMedia>
       </Container>
   );
 }

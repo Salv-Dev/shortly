@@ -22,5 +22,7 @@ export default (name: string) => {
             return <Pinterest />
         case 'twitter' :
             return <Twitter />
+        default :
+            throw new Error(`Ícone: ${name} não foi encontrado.`);
     }
 }

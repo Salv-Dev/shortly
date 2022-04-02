@@ -18,6 +18,7 @@ const AdvancedStatistics: React.FC = () => {
             <Card 
               title={data.title}
               desc={data.desc}
+              key={data.title}
             >
               <BackgroundIcon>
                 <Icon 
