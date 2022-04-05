@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 interface Props {
-    error: boolean
+    error?: boolean
 }
 
 export const Container = styled.div`

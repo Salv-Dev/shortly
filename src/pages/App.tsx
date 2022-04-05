@@ -1,6 +1,5 @@
 import Helmet from 'react-helmet';
 import Header from '../components/organisms/Header';
-import MobileMenu from '../components/molecules/MobileMenu';
 import Main from '../components/organisms/Main';
 import Footer from '../components/organisms/Footer';
 import GlobalStyles from './../config/GlobalStyles';
@@ -20,7 +19,6 @@ function App() {
       <div className="App">
         <ThemeProvider theme={theme}>
           <Header />
-          <MobileMenu />
           <Main />
           <Footer />
         </ThemeProvider>
