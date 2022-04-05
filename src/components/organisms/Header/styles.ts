@@ -7,15 +7,17 @@ export const Container = styled.header`
 `;
 
 export const Label = styled.label`
+    z-index: 3;
+
     & ~ input {
         display: none;
     }
 
-    & ~ input ~ nav {
+    & ~ input ~ div {
         display: none;
     }
 
-    & ~ input:checked ~ nav {
+    & ~ input:checked ~ div {
         display: flex;
     }
 `;

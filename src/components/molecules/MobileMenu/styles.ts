@@ -1,4 +1,16 @@
+import { keyframes } from "styled-components";
 import styled from 'styled-components';
+
+const fadeIn = keyframes`
+    from {
+        opacity: 0;
+        top: -30px;
+    }
+    to {
+        opacity: 1;
+        top: 0;
+    }
+`;
 
 export const Container = styled.div`
     position: fixed;
@@ -8,6 +20,7 @@ export const Container = styled.div`
     height: 100vh;
     background-color: transparent;
     z-index: 2;
+    animation: ${fadeIn} .3s ease-in-out;
 `;
 
 export const Nav = styled.nav`

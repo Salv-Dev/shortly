@@ -7,6 +7,7 @@ import { Container, Nav, Hr, ButtonGroup } from './styles';
 
 const MobileMenu: React.FC = () => {
   return (
+      <Container>
           <Nav>
             <List style={{ color: 'white', gap: '40px' }} align="center">
                 <li>
@@ -40,6 +41,7 @@ const MobileMenu: React.FC = () => {
                 <Button variant="rounded" style={{ padding: '10px 0'}}>Crie sua Conta</Button>
             </ButtonGroup>
           </Nav>
+      </Container>
   );
 }
 
