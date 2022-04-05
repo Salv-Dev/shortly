@@ -2,13 +2,14 @@ import styled from 'styled-components';
 
 interface Props {
     hoverColor?: string,
-    activeColor?: string
+    activeColor?: string,
+    color?: string
 }
 
 export const Container = styled.a<Props>`
     font-size: 14px;
     text-decoration: none;
-    color: ${props => props.theme.palette.primary.light.text};
+    color: ${props => props.color ? props.color : props.theme.palette.primary.light.text};
     cursor: pointer;
     transition: color .2s ease-in-out;
 

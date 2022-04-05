@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
       <Container>
           <Logo href="/" svg={<LogoSVG />} fill="white" />
           <WrapperList>
-            <List title="Funcionalidades" style={{ color: 'white' }} align="center">
+            <List title="Produtos" style={{ color: 'white' }} align="center">
               <Link href="/" hoverColor="#2acfcf" ><li>Encurtador de Links</li></Link>
               <Link href="/" hoverColor="#2acfcf" ><li>Links de Marca</li></Link>
               <Link href="/" hoverColor="#2acfcf" ><li>Análise</li></Link>
