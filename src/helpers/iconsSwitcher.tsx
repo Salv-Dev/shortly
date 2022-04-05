@@ -23,6 +23,6 @@ export default (name: string) => {
         case 'twitter' :
             return <Twitter />
         default :
-            throw new Error(`Ícone: ${name} não foi encontrado.`);
+            console.error(`Warning: Ícone ${name} não foi encontrado.`);
     }
 }
