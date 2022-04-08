@@ -15,24 +15,29 @@ interface ErrorInfo {
   errorMsg?: string
 }
 
+interface ShortenedLinkInfo {
+  original: string,
+  short: string
+}
+
 const UrlShortenerInput = ({ style }: Props) => {
   const inputEl = useRef<null | HTMLInputElement>(null);
   const [link, setLink] = useState('');
-  const [shortedLink, setShortedLink] = useState('');
+  const [shortenedLink, setShortenedLink] = useState<ShortenedLinkInfo[]>([]);
   const [loading, setLoading] = useState(false);
   const [er, setEr] = useState<ErrorInfo>({error: false});
 
   async function shortLink(link:string) {
     try {
-      const result = await api.get(link);
+      const res = await api.get(link);
+      const original = res.data.result.original_link;
+      const short = res.data.result.full_short_link;
+      const shortInfo = {original, short};
+      
       setLoading(false);
-      console.log(result.data);
       setLink('');
-      console.log(inputEl.current);
-
       inputEl.current?.focus();
-
-      return result.data;
+      setShortenedLink((prev) => [...prev, shortInfo]);
     } catch(e) {
       setEr({ error: true });
       setLoading(false);
@@ -75,10 +80,13 @@ const UrlShortenerInput = ({ style }: Props) => {
           />
           <Button onClick={clickBtnSubmit}>{loading ? 'Encurtando...' : 'Encurte!'}</Button>
         </Container>
+        {shortenedLink.length > 0 &&
         <WrapperUrlShortenerResult>
-          <UrlShortenerResult originalUrl="https://teste.com" shortenedUrl="https://tst.com" />
-          <UrlShortenerResult originalUrl="https://teste.com" shortenedUrl="https://tst.com" />
+          {shortenedLink.map((el, i) => (
+            <UrlShortenerResult key={i} originalUrl={el.original} shortenedUrl={el.short} />
+          ))}
         </WrapperUrlShortenerResult>
+        }
       </>
   );
 }
