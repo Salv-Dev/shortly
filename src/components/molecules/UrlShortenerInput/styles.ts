@@ -10,3 +10,11 @@ export const Container = styled.div`
     background-color: ${props => props.theme.palette.common.violet};
     border-radius: ${props => props.theme.borderRadius};
 `;
+
+export const WrapperUrlShortenerResult = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 100px;
+    margin-top: -70px;
+`;

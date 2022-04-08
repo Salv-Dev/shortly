@@ -1,8 +1,9 @@
 import Input from '../../atoms/Input';
 import Button from '../../atoms/Button';
 import api from '../../../helpers/customInstanceAxios';
+import UrlShortenerResult from '../UrlShortenerResult';
 
-import { Container } from './styles';
+import { Container, WrapperUrlShortenerResult } from './styles';
 import React, { useRef, useState } from 'react';
 
 interface Props {
@@ -61,18 +62,24 @@ const UrlShortenerInput = ({ style }: Props) => {
   }
 
   return (
-      <Container style={style}>
-        <Input 
-          ref={inputEl}
-          placeholder="Encurtar um link aqui..."
-          value={link}
-          onChange={changeValueInput}
-          onKeyDown={enterKeySubmit}
-          error={er.error} 
-          errorMsg={er.errorMsg}
-        />
-        <Button onClick={clickBtnSubmit}>{loading ? 'Encurtando...' : 'Encurte!'}</Button>
-      </Container>
+      <>
+        <Container style={style}>
+          <Input 
+            ref={inputEl}
+            placeholder="Encurtar um link aqui..."
+            value={link}
+            onChange={changeValueInput}
+            onKeyDown={enterKeySubmit}
+            error={er.error} 
+            errorMsg={er.errorMsg}
+          />
+          <Button onClick={clickBtnSubmit}>{loading ? 'Encurtando...' : 'Encurte!'}</Button>
+        </Container>
+        <WrapperUrlShortenerResult>
+          <UrlShortenerResult originalUrl="https://teste.com" shortenedUrl="https://tst.com" />
+          <UrlShortenerResult originalUrl="https://teste.com" shortenedUrl="https://tst.com" />
+        </WrapperUrlShortenerResult>
+      </>
   );
 }
 
