@@ -1,3 +1,4 @@
+import { forwardRef } from 'react';
 import { Container, Ipt, ErrorMessage } from './styles';
 
 interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
@@ -6,17 +7,17 @@ interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
     errorMsg?: string
 }
 
-const Input = ({ placeholder, error = false, errorMsg = 'Algo deu errado :(', ...props }: Props) => {
+const Input = forwardRef<HTMLInputElement, Props>(({ placeholder, error = false, errorMsg = 'Algo deu errado :(',  ...props }, ref) => {
   return (
       {...props.type === 'checkbox' ? 
-        <Ipt type="checkbox" {...props}/>
+        <Ipt ref={ref} type="checkbox" {...props}/>
         :
         <Container>
-            <Ipt placeholder={placeholder} error={error} {...props}/>
+            <Ipt ref={ref} placeholder={placeholder} error={error} {...props}/>
             { error && <ErrorMessage>{errorMsg}</ErrorMessage>}
         </Container>
         }
   );
-}
+})
 
 export default Input;

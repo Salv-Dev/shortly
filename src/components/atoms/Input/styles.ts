@@ -14,7 +14,7 @@ export const Ipt = styled.input<Props>`
     font-size: 18px;
     padding: 15px;
     border-radius: ${props => props.theme.borderRadius};
-    color: ${props => props.theme.palette.primary.light.main};
+    color: ${props => props.error ? props.theme.palette.common.red : props.theme.palette.primary.light.main};
     font-weight: bold;
 
     ::-webkit-input-placeholder {
