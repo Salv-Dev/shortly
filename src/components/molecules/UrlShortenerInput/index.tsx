@@ -55,7 +55,6 @@ const UrlShortenerInput = ({ style }: Props) => {
 
   function copyToClipboard(shortenedUrl:string, i:number) {
     navigator.clipboard.writeText(shortenedUrl);
-    console.log(shortenedLink);
     setCopied(i);
   }
 

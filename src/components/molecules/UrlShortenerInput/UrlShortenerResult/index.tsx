@@ -11,12 +11,6 @@ interface Props {
 }
 
 const UrlShortenerResult = ({ originalUrl, shortenedUrl, onClick, isCopy }:Props) => {
-  const [isCopied, setIsCopied] = useState(false);
-  useEffect(() => {
-    console.log(isCopy);
-  }, [isCopy])
-  
-  
   return (
       <Container>
           <OriginalUrl>{originalUrl}</OriginalUrl>
