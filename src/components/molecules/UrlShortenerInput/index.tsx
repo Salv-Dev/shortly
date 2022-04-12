@@ -1,7 +1,7 @@
 import Input from '../../atoms/Input';
 import Button from '../../atoms/Button';
 import api from '../../../helpers/customInstanceAxios';
-import UrlShortenerResult from '../UrlShortenerResult';
+import UrlShortenerResult from './UrlShortenerResult';
 
 import { Container, WrapperUrlShortenerResult } from './styles';
 import React, { useRef, useState } from 'react';
@@ -17,7 +17,8 @@ interface ErrorInfo {
 
 interface ShortenedLinkInfo {
   original: string,
-  short: string
+  short: string,
+  isCopied: boolean
 }
 
 const UrlShortenerInput = ({ style }: Props) => {
@@ -30,9 +31,8 @@ const UrlShortenerInput = ({ style }: Props) => {
   async function shortLink(link:string) {
     try {
       const res = await api.get(link);
-      const original = res.data.result.original_link;
-      const short = res.data.result.full_short_link;
-      const shortInfo = {original, short};
+      const short:string = res.data.result.full_short_link;
+      const shortInfo = {original: link, short, isCopied: false};
       
       setLoading(false);
       setLink('');
@@ -43,6 +43,20 @@ const UrlShortenerInput = ({ style }: Props) => {
       setLoading(false);
       inputEl.current?.focus();
     }
+  }
+
+  function setCopied(i:number) {
+    setShortenedLink(prev => {
+      prev.forEach(el => el.isCopied = false);
+      prev[i].isCopied = true;
+      return [...prev];
+    });
+  }
+
+  function copyToClipboard(shortenedUrl:string, i:number) {
+    navigator.clipboard.writeText(shortenedUrl);
+    console.log(shortenedLink);
+    setCopied(i);
   }
 
   function clickBtnSubmit() {
@@ -83,7 +97,7 @@ const UrlShortenerInput = ({ style }: Props) => {
         {shortenedLink.length > 0 &&
         <WrapperUrlShortenerResult>
           {shortenedLink.map((el, i) => (
-            <UrlShortenerResult key={i} originalUrl={el.original} shortenedUrl={el.short} />
+            <UrlShortenerResult key={i} originalUrl={el.original} shortenedUrl={el.short} onClick={() => copyToClipboard(el.short, i)} isCopy={el.isCopied}/>
           ))}
         </WrapperUrlShortenerResult>
         }
