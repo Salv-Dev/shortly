@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 
 interface Props {
-    align?: string
+    align?: string,
+    horizontal?: boolean
 }
 
 export const Container = styled.ul<Props>`
     display: flex;
-    flex-direction: column;
+    flex-direction: ${props => props.horizontal ? 'row' : 'column'};
     text-align: ${props => props.align};
     align-items: ${props => props.align};
     gap: 10px;

@@ -21,6 +21,11 @@ export const Container = styled.div`
     background-color: transparent;
     z-index: 2;
     animation: ${fadeIn} .3s ease-in-out;
+
+    @media (min-width: 700px) {
+        width: 0;
+        height: 0;
+    }
 `;
 
 export const Nav = styled.nav`
@@ -35,6 +40,10 @@ export const Nav = styled.nav`
     padding: 40px;
     background-color: ${props => props.theme.palette.common.violet};
     border-radius: ${props => props.theme.borderRadius};
+
+    @media (min-width: 700px) {
+        display: none;
+    }
 `;
 
 export const Hr = styled.div`

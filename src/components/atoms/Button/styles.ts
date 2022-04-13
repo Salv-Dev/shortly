@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 interface Props {
-    variant?: string
+    variant?: string,
+    size?: string
 }
 
 export const Container = styled.button<Props>`
@@ -22,8 +23,8 @@ export const Container = styled.button<Props>`
                         }
                     }};
     color: ${props => props.theme.palette.common.white};
-    padding: 10px 40px;
-    font-size: 1rem;
+    padding: ${props => props.size === 'sm'? '5px 20px' : '10px 40px'};
+    font-size: ${props => props.size === 'sm'? '0.7rem' : '1rm'};
     border-radius: ${props => {
                         switch(props.variant) {
                             case 'rounded' :
@@ -41,7 +42,7 @@ export const Container = styled.button<Props>`
 
     &:active,
     &:hover {
-        opacity: .7;
+        filter: saturate(150%);
         
     }
 `;

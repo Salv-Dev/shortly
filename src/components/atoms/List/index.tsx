@@ -6,12 +6,13 @@ interface Props {
     title?: string,
     style?: React.CSSProperties,
     align?: "left" | "center" | "right",
+    horizontal?: boolean,
     children?: React.ReactNode
 }
 
-const List = ({ title, children, style, align }:Props ) => {
+const List = ({ title, children, style, align, horizontal }:Props ) => {
   return (
-      <Container style={style} align={align || "left"}>
+      <Container style={style} align={align || "left"} horizontal={false || horizontal}>
           { title ?
            <>
             <Title className="title">{title}</Title>

@@ -6,4 +6,8 @@ export const Container = styled.div`
     border: none;
     background: none;
     cursor: pointer;
+
+    @media (min-width: 700px) {
+        display: none;
+    }
 `;
