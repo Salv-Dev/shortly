@@ -12,7 +12,7 @@ export const Container = styled.div`
 export const Ipt = styled.input<Props>`
     border: 3px solid ${props => props.error ? props.theme.palette.common.red : props.theme.palette.common.white};
     font-size: 18px;
-    padding: 15px;
+    padding: 10px 15px;
     border-radius: ${props => props.theme.borderRadius};
     color: ${props => props.error ? props.theme.palette.common.red : props.theme.palette.primary.light.main};
     font-weight: bold;

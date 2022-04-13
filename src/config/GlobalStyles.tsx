@@ -27,6 +27,11 @@ const GlobalStyle = createGlobalStyle`
     footer, header, hgroup, menu, nav, section {
         display: block;
     }
+    
+    * {
+        font-family: 'Poppins', sans-serif;
+    }
+
     body {
         line-height: 1;
         color: #232127;

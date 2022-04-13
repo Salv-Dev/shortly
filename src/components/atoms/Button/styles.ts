@@ -22,9 +22,8 @@ export const Container = styled.button<Props>`
                         }
                     }};
     color: ${props => props.theme.palette.common.white};
-    padding: 15px 40px;
+    padding: 10px 40px;
     font-size: 1rem;
-    font-weight: bold;
     border-radius: ${props => {
                         switch(props.variant) {
                             case 'rounded' :
