@@ -11,7 +11,7 @@ export const Container = styled.div`
 
 export const Ipt = styled.input<Props>`
     border: 3px solid ${props => props.error ? props.theme.palette.common.red : props.theme.palette.common.white};
-    font-size: 18px;
+    font-size: 1rem;
     padding: 10px 15px;
     border-radius: ${props => props.theme.borderRadius};
     color: ${props => props.error ? props.theme.palette.common.red : props.theme.palette.primary.light.main};
@@ -36,6 +36,10 @@ export const Ipt = styled.input<Props>`
         color: ${props => props.error ? props.theme.palette.common.red : props.theme.palette.primary.light.text};
         opacity: 0.5;
     }
+
+    @media (min-width: 700px) {
+        position: relative;
+    }
 `;
 
 export const ErrorMessage = styled.p`
@@ -43,4 +47,10 @@ export const ErrorMessage = styled.p`
     font-style: italic;
     color: ${props => props.theme.palette.common.red};
     margin-top: 10px;
+
+    @media (min-width: 700px) {
+        position: absolute;
+        bottom: 10px;
+        left: 30px;
+    }
 `;

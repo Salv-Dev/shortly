@@ -8,7 +8,7 @@ import { Container, WrapperTitle, Title, Desc, BackgroundIcon } from './styles';
 const AdvancedStatistics: React.FC = () => {
   return (
       <Container>
-          <UrlShortenerInput style={{ position: 'relative', top: 'calc(-181px / 2)'}} />
+          <UrlShortenerInput />
           <WrapperTitle>
             <Title>Estatísticas avançadas</Title>
             <Desc>Acompanhe o desempenho de seus links na web com nosso painel de estatísticas avançadas.</Desc>

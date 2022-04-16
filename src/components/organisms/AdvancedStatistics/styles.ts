@@ -4,6 +4,30 @@ export const Container = styled.section`
     background-color: ${props => props.theme.palette.primary.light.background};
     margin-top: 170px;
     padding: 0 20px 80px 20px;
+
+    & > div:first-child {
+        position: relative;
+        top: calc(-181px / 2);
+    }
+
+    @media (min-width: 700px) {
+        padding: 0 40px 80px 40px;
+
+        & > div:first-child {
+            top: calc(-111px / 2);
+        }
+    }
+
+    @media (min-width: 900px) {
+        padding: 0 100px 80px 100px;
+    }
+
+    @media (min-width: 1200px) {
+        & > div:first-child {
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+    }
 `;
 
 export const WrapperTitle = styled.div`

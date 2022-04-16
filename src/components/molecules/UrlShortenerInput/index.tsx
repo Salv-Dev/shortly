@@ -60,7 +60,7 @@ const UrlShortenerInput = ({ style }: Props) => {
 
   function clickBtnSubmit() {
     if(link.length === 0) {
-      setEr({error: true, errorMsg: 'Adicione algum link antes'});
+      setEr({error: true, errorMsg: 'Adicione algum link primeiro'});
       return
     }
     setEr({error: false})
