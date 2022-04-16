@@ -14,7 +14,9 @@ export const Container = styled.header`
     }
 
     @media (min-width: 1200px) {
-        padding: 40px 20%;
+        max-width: 900px;
+        padding: 40px 0;
+        margin: 0 auto;
     }
 `;
 
