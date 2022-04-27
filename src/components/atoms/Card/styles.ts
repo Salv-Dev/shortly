@@ -18,10 +18,34 @@ export const Container = styled.div`
         position: absolute;
         bottom: -80px;
         left: 50%;
+        right: 0;
         transform: translate(-50%, 0);
         width: 8px;
         height: 80px;
         background-color: ${props => props.theme.palette.primary.light.accent};
+    }
+
+    @media (min-width: 900px) {
+        min-width: 200px;
+        max-width: 400px;
+        justify-content: flex-start;
+
+        &:not(:last-child) {
+            margin-bottom: 0;
+        }
+
+        &:not(:last-child)::after {
+            left: auto;
+            right: -600px;
+            bottom: 50%;
+            transform: translate(-50%, 0);
+            width: 400px;
+            height: 8px;
+        }
+
+        &:nth-child(2)::after {
+            display: none;
+        }
     }
 `;
 
@@ -30,6 +54,10 @@ export const WrapperTitle = styled.div`
     flex-direction: column;
     gap: 20px;
     margin-top: -10px;
+
+    @media (min-width: 900px) {
+        margin-top: 0
+    }
 `;
 
 export const Title = styled.h3`
@@ -39,6 +67,10 @@ export const Title = styled.h3`
     line-height: 2rem;
     color: ${props => props.theme.palette.primary.light.main};
     text-align: center;
+
+    @media (min-width: 900px) {
+        text-align: left;
+    }
 `;
 
 export const Desc = styled.p`
@@ -47,4 +79,8 @@ export const Desc = styled.p`
     text-align: center;
     line-height: 1.4rem;
     margin-bottom: 10px;
+
+    @media (min-width: 900px) {
+        text-align: left;
+    }
 `;

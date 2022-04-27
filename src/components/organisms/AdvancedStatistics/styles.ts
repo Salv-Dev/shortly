@@ -36,6 +36,15 @@ export const WrapperTitle = styled.div`
     gap: 20px;
     margin: -20px 0 20px 0;
     padding: 0 20px 60px 20px;
+
+    @media (min-width: 700px) {
+        padding: 50px 100px 100px 100px;
+    }
+
+    @media (min-width: 900px) {
+        max-width: 600px;
+        margin: 0 auto;
+    }
 `;
 
 export const Title = styled.h2`
@@ -45,6 +54,10 @@ export const Title = styled.h2`
     letter-spacing: -1px;
     line-height: 2.2rem;
     color: ${props => props.theme.palette.primary.light.main};
+
+    @media (min-width: 700px) {
+        font-size: 30px;
+    }
 `;
 
 export const Desc = styled.p`
@@ -52,6 +65,29 @@ export const Desc = styled.p`
     color: ${props => props.theme.palette.primary.light.text};
     text-align: center;
     line-height: 1.4rem;
+`;
+
+export const WrapperCard = styled.div`
+
+    @media (min-width: 900px) {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 20px;
+
+        & > div:nth-child(2) {
+             margin-top: 40px;
+        }
+
+        & > div:nth-child(3) {
+            margin-top: 80px;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        max-width: 900px;
+        margin: 0 auto;
+    }
 `;
 
 export const BackgroundIcon = styled.div`
@@ -66,4 +102,9 @@ export const BackgroundIcon = styled.div`
     height: 80px;
     border-radius: 50%;
     background-color: ${props => props.theme.palette.common.violet};
+
+    @media (min-width: 900px) {
+        left: 0;
+        transform: none;
+    }
 `;
