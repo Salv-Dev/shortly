@@ -14,7 +14,7 @@ export const Container  = styled.section`
     }
 
     @media (min-width: 1600px) {
-        max-width: 900px;
+        max-width: 1200px;
         margin: 0 auto;
         overflow: inherit;
         height: 500px;
@@ -57,7 +57,7 @@ export const Bg = styled.div`
     }
 
     @media (min-width: 1600px) {
-        margin-right: -350px;
+        margin-right: -100px;
     }
 `;
 
@@ -106,6 +106,10 @@ export const TextWrapper = styled.div`
         max-width: 900px;
         left: 50%;
         transform: translate(-50%, 0);
+    }
+
+    @media (min-width: 1400px) {
+        max-width: 1200px;
     }
 `;
 

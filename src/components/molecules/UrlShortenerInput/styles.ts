@@ -20,8 +20,11 @@ export const Container = styled.div`
     }
 
     @media (min-width: 1200px) {
-        
         max-width: 900px;
+    }
+
+    @media (min-width: 1400px) {
+        max-width: 1200px;
     }
 `;
 

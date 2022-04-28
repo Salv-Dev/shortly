@@ -41,6 +41,10 @@ export const Container = styled.div`
         left: 50%;
         transform: translate(-50%, 0);
     }
+
+    @media (min-width: 1400px) {
+        max-width: 1200px;
+    }
 `;
 
 export const OriginalUrl = styled.p`

@@ -18,6 +18,10 @@ export const Container = styled.header`
         padding: 40px 0;
         margin: 0 auto;
     }
+
+    @media (min-width: 1400px) {
+        max-width: 1200px;
+    }
 `;
 
 export const Label = styled.label`

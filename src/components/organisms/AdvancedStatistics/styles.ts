@@ -88,6 +88,11 @@ export const WrapperCard = styled.div`
         max-width: 900px;
         margin: 0 auto;
     }
+
+    @media (min-width: 1400px) {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 `;
 
 export const BackgroundIcon = styled.div`

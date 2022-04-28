@@ -47,6 +47,14 @@ export const Container = styled.div`
             display: none;
         }
     }
+
+    @media (min-width: 1400px) {
+        height: 300px;
+        &:not(:last-child)::after {
+            right: -800px;
+            width: 533px;
+        }
+    }
 `;
 
 export const WrapperTitle = styled.div`
