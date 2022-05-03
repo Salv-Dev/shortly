@@ -11,6 +11,7 @@ import { Container, WrapperFooter, WrapperList, SocialMedia } from './styles';
 
 const Footer: React.FC = () => {
   const [matches, setMatches] = useState(window.matchMedia("(min-width: 1000px)").matches);
+  const alignList = matches ? "left" : "center";
 
   useEffect(() => {
     window.matchMedia("(min-width: 1000px)")
@@ -23,46 +24,24 @@ const Footer: React.FC = () => {
       <Container>
         <WrapperFooter>
           <Logo href="/" svg={<LogoSVG />} fill="white" />
-          {matches && 
-            <WrapperList>
-              <List title="Produtos" style={{ color: 'white' }} align="left">
-                <Link href="/" hoverColor="#2acfcf" ><li>Encurtador de Links</li></Link>
-                <Link href="/" hoverColor="#2acfcf" ><li>Links de Marca</li></Link>
-                <Link href="/" hoverColor="#2acfcf" ><li>Análise</li></Link>
-              </List>
-              <List title="Recursos" style={{ color: 'white' }} align="left">
-                <Link href="/" hoverColor="#2acfcf" ><li>Blog</li></Link>
-                <Link href="/" hoverColor="#2acfcf" ><li>Desenvolvedores</li></Link>
-                <Link href="/" hoverColor="#2acfcf" ><li>Suporte</li></Link>
-              </List>
-              <List title="Companhia" style={{ color: 'white' }} align="left">
-                <Link href="/" hoverColor="#2acfcf" ><li>Sobre</li></Link>
-                <Link href="/" hoverColor="#2acfcf" ><li>Nosso Time</li></Link>
-                <Link href="/" hoverColor="#2acfcf" ><li>Carreira</li></Link>
-                <Link href="/" hoverColor="#2acfcf" ><li>Contato</li></Link>
-              </List>
-            </WrapperList>
-          }
-          {!matches && 
-            <WrapperList>
-              <List title="Produtos" style={{ color: 'white' }} align="center">
-                <Link href="/" hoverColor="#2acfcf" ><li>Encurtador de Links</li></Link>
-                <Link href="/" hoverColor="#2acfcf" ><li>Links de Marca</li></Link>
-                <Link href="/" hoverColor="#2acfcf" ><li>Análise</li></Link>
-              </List>
-              <List title="Recursos" style={{ color: 'white' }} align="center">
-                <Link href="/" hoverColor="#2acfcf" ><li>Blog</li></Link>
-                <Link href="/" hoverColor="#2acfcf" ><li>Desenvolvedores</li></Link>
-                <Link href="/" hoverColor="#2acfcf" ><li>Suporte</li></Link>
-              </List>
-              <List title="Companhia" style={{ color: 'white' }} align="center">
-                <Link href="/" hoverColor="#2acfcf" ><li>Sobre</li></Link>
-                <Link href="/" hoverColor="#2acfcf" ><li>Nosso Time</li></Link>
-                <Link href="/" hoverColor="#2acfcf" ><li>Carreira</li></Link>
-                <Link href="/" hoverColor="#2acfcf" ><li>Contato</li></Link>
-              </List>
-            </WrapperList>
-          }
+          <WrapperList>
+            <List title="Produtos" style={{ color: 'white' }} align={alignList}>
+              <Link href="/" hoverColor="#2acfcf" ><li>Encurtador de Links</li></Link>
+              <Link href="/" hoverColor="#2acfcf" ><li>Links de Marca</li></Link>
+              <Link href="/" hoverColor="#2acfcf" ><li>Análise</li></Link>
+            </List>
+            <List title="Recursos" style={{ color: 'white' }} align={alignList}>
+              <Link href="/" hoverColor="#2acfcf" ><li>Blog</li></Link>
+              <Link href="/" hoverColor="#2acfcf" ><li>Desenvolvedores</li></Link>
+              <Link href="/" hoverColor="#2acfcf" ><li>Suporte</li></Link>
+            </List>
+            <List title="Companhia" style={{ color: 'white' }} align={alignList}>
+              <Link href="/" hoverColor="#2acfcf" ><li>Sobre</li></Link>
+              <Link href="/" hoverColor="#2acfcf" ><li>Nosso Time</li></Link>
+              <Link href="/" hoverColor="#2acfcf" ><li>Carreira</li></Link>
+              <Link href="/" hoverColor="#2acfcf" ><li>Contato</li></Link>
+            </List>
+          </WrapperList>
           <SocialMedia>
             <Link  hoverColor="#2acfcf">
               <Icon name="facebook" size={24}/>
