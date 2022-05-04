@@ -30,7 +30,15 @@ const UrlShortenerInput = ({ style }: Props) => {
 
   async function shortLink(link:string) {
     try {
-      const res = await api.get(link);
+      let convertedLink = '';
+      if(link.includes('https://')) {
+        convertedLink = link.replace('https://', '');
+      } else if(link.includes('http://')) {
+        convertedLink = link.replace('http://', '');
+      } else {
+        convertedLink = link;
+      }
+      const res = await api.get(convertedLink);
       const short:string = res.data.result.full_short_link;
       const shortInfo = {original: link, short, isCopied: false};
       
