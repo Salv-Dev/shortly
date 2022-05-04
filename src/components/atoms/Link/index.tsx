@@ -11,7 +11,7 @@ interface Props extends React.AnchorHTMLAttributes<HTMLAnchorElement>{
 
 const Link = ({children, hoverColor, activeColor, target, color, ...props}:Props) => {
   return (
-      <Container {...props} hoverColor={hoverColor} activeColor={activeColor} color={color}  target={target || '_blank'}>
+      <Container {...props} hoverColor={hoverColor} activeColor={activeColor} color={color}  target={target || '_self'}>
         {children}
       </Container>
   );

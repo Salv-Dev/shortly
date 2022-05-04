@@ -16,13 +16,13 @@ const Header: React.FC = () => {
           <Logo svg={<LogoSVG />} alt="Logo da Shortly na cor azul escuro" href="/" />
           <WrapperDesktopMenu>
             <List horizontal  align="center" style={{ gap: '20px'}}>
-              <li><Link href="#">Produtos</Link></li>
-              <li><Link href="#">Preços</Link></li>
-              <li><Link href="#">Recursos</Link></li>
+              <li><Link href="/">Produtos</Link></li>
+              <li><Link href="/">Preços</Link></li>
+              <li><Link href="/">Recursos</Link></li>
             </List>
             <Login>
               <List horizontal align="center">
-                <li><Link href="#">Login</Link></li>
+                <li><Link href="/">Login</Link></li>
               </List>
               <Button variant="rounded" size="sm">Criar Conta</Button>
             </Login>

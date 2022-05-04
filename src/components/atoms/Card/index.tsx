@@ -8,7 +8,6 @@ interface Props {
 }
 
 const Card = ({ children, title, desc }: Props) => {
-  console.log(children);
   return (
       <Container style={{ paddingTop: `${children && '0px'}` }}>
           {children}
