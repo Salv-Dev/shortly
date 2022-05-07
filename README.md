@@ -25,9 +25,6 @@
 ## Iniciando
 
 1. Clone este repositório.
-2. Vá para o diretório: `cd shortly/`<br />
-
-### Iniciando o frontend
-
-1. Rode `npm i` para instalar as dependências
-2. Rode `npm start` para iniciar a aplicação
+2. Vá para o diretório: `cd shortly/`.
+3. Rode `npm i` para instalar as dependências.
+4. Rode `npm start` para iniciar a aplicação.
